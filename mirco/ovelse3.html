@@ -66,7 +66,9 @@
 <body>
     <!--Oppgave: Fyll siden med fornuftig microdata, med riktig markering er det også flere elementer som registreres som rich results i google, 
     husk å test og validerer i både validatoren og rich result
-    Bruk Schema.org for riktig microdata og validator, og Google Test Rich Results for Google resultater -->
+    Bruk Schema.org for riktig microdata og validator, og Google Test Rich Results for Google resultater 
+    
+    FUNKER IKKE I RICH RESULT TESTEN-->
     <header id="page-header">
         <nav class="container">
             <h3>Logo</h3>
@@ -84,14 +86,14 @@
                 <li><b><a href="#">Tower of the Swallow</a></b></li>
             </ul>
         </nav>
-        <main>
+        <main itemscope itemtype="https://schema.org/Book">
             <article class="article-content">
                 <figure>
-                    <img src="https://s1.adlibris.com/images/56720886/tower-of-the-swallow.jpg" alt="bilde av witcher bok">
+                    <img src="https://s1.adlibris.com/images/56720886/tower-of-the-swallow.jpg" alt="bilde av witcher bok" itemprop="image">
                 </figure>
                 <section>
                     <header>
-                        <h2>Tower of the Swallow</h2><span>- pocket, Engelsk, 2020</span>
+                        <h2 itemprop="name">Tower of the Swallow</h2><span itemprop="about">- pocket, Engelsk, 2020</span>
                     </header>
                     <span>Forfatter: Andrzej Sapkowski</span>
                     <span id="price"></span>
@@ -104,13 +106,13 @@
                     </form>
                     <article>
                         <h4>Beskrivelse</h4>
-                        <p>The world is at war and the prophesied saviour is missing in the fourth novel in the New York Times bestselling Witcher series that inspired the #1 most watched Netflix series of 2019</p>
+                        <p itemprop="description">The world is at war and the prophesied saviour is missing in the fourth novel in the New York Times bestselling Witcher series that inspired the #1 most watched Netflix series of 2019</p>
                     </article>
                     <article>
                         <h4>Produktinformasjon</h4>
                         <table>
                             <tr>
-                                <td>Forfatter: Andrzej Sapkowski</td>
+                                <td itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Forfatter: Andrzej Sapkowski</span></td>
                                 <td>Vekt: 324 gram</td>
                             </tr>
                             <tr>
@@ -118,15 +120,15 @@
                                 <td>Serie: The Witcher</td>
                             </tr>
                             <tr>
-                                <td>ISBN: 9781473231115</td>
+                                <td itemprop="isbn">ISBN: 9781473231115</td>
                                 <td>Utgitt: 2020-02-13</td>
                             </tr>
                             <tr>
-                                <td>Språk: Engelsk</td>
-                                <td>Forlag: Orion</td>
+                                <td itemprop="inLanguage">Språk: Engelsk</td>
+                                <td itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Forlag: Orion</span></td>
                             </tr>
                             <tr>
-                                <td colspan="2">Antall sider: 464</td>
+                                <td itemprop="numberOfPages" colspan="2">Antall sider: 464</td>
                             </tr>
                         </table>
                     </article>
